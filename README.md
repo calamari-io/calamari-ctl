@@ -1,5 +1,5 @@
 # calamari-ctl repository
-This repository contains a set of command line tools used for interacting with calamari.io API
+This repository contains a set of command-line tools used for interacting with calamari.io API
 
 # Disclaimer
 This software is provided "AS IS", without waranty of any kind. In no event shall the calamari.io company be liable for any claim, damages or other liability. USE AT YOUR OWN RISK!
@@ -21,10 +21,12 @@ To install all requirements, simply type:
 
 *Do it in the main repository directory - the one with file named `Pipfile`.*
 
+# Scripts
+
 ## shift-ctl.py
 Manage calamari.io shifts from command line
 
-## Usage
+### Usage
 
 To use this script you need Calamari API key and your Base URL. You can find detailed instruction on [calamari.io blog](https://help.calamari.io/en/collections/5990-api).
 
@@ -52,7 +54,7 @@ options:
   -a, --all             Run for all users. Can't be used with -e
 ```
 
-### Listing shifts
+#### Listing shifts
 Listing shifts for specific users(s):
 
 ```
@@ -66,7 +68,7 @@ Listing shifts for all users in organization:
 # pipenv run ./shift-ctl.py list -k '<API_KEY>' -b '<BASE_URL>' -f '<START_DATE>' -t '<END_DATE>' -a
 ```
 
-### Creating shifts
+#### Creating shifts
 
 Shifts will be created according to users work schedule.
 
@@ -82,7 +84,7 @@ Create shifts for all users in organization:
 # pipenv run ./shift-ctl.py list -k '<API_KEY>' -b '<BASE_URL>' -f '<START_DATE>' -t '<END_DATE>' -a
 ```
 
-### Delete shifts
+#### Deleting shifts
 
 Script will ask you to review shifts that you're planning to delete and to confirm deletion. If you shure that you know what you're doing add `--force`
 
@@ -108,7 +110,7 @@ Delete shifts for all users in organization:
 ## employee-ctl.py
 Manage employees 
 
-## Usage
+### Usage
 
 To use this script you need Calamari API key and your Base URL. You can find detailed instruction on [calamari.io blog](https://help.calamari.io/en/collections/5990-api).
 
@@ -133,7 +135,7 @@ options:
   -a, --all             Run for all users. Can't be used with -e
 ```
 
-### Listing employees details
+#### Listing employees details
 Listing employees(s) account details
 
 ```
@@ -146,7 +148,7 @@ Listing all employees in organization
 # pipenv run ./employees-ctl.py list -k '<API_KEY>' -b '<BASE_URL>' -a
 ```
 
-### Archiving  employees
+#### Archiving  employees
 Archive selected employees accounts
 
 ```
