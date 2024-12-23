@@ -29,6 +29,8 @@ def get_shifts(base_url, auth_basic, date_from, date_to, teams=[], positions=[],
      auth=auth_basic
   )
 
+  if response.status_code != 200:
+    print('Error retrieving shifts. Error: [',response.status_code,']: ',response.text)
   response.raise_for_status()
 
   return response

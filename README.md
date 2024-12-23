@@ -22,6 +22,41 @@ To install all requirements, simply type:
 *Do it in the main repository directory - the one with file named `Pipfile`.*
 
 # Scripts
+## shift-import.py
+Import shifts from .csv file
+
+### Usage
+
+To use this script you need Calamari API key and your Base URL. You can find detailed instruction on [calamari.io blog](https://help.calamari.io/en/collections/5990-api).
+
+You can check all available script options using `--help` parameter. Simply run:
+```
+./shift-import.py --help
+usage: shift-import.py [options]
+
+options:
+  -h, --help            show this help message and exit
+  -k API_KEY, --api-key API_KEY
+                        API Key - can be found in Configuration->Integrations->API
+  -b BASE_URL, --base-url BASE_URL
+                        API Base URL - can be found in Configuration->Integrations->API. I.e. https://sample-tenant.us.calamari.io/api/
+  -f FILE, --file FILE  .csv file. Format described in README.md
+```
+
+#### Importing from .csv file
+
+```
+# pipenv run ./shift-import.py  -k '<API_KEY>' -b '<BASE_URL>' -f <file>.csv
+```
+
+The .csv file must be in the format specified below.
+
+```
+email,start_date,end_date
+emai@addres1.com,2024-12-23T11:54:00,2024-05-01T13:11:00
+email@address2.com,2024-12-23T09:00:00,2024-05-02T16:44:00
+```
+
 
 ## shift-ctl.py
 Manage calamari.io shifts from command line
